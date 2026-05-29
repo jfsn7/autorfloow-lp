@@ -175,7 +175,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto mb-16"
           >
-            <GlowButton href="https://app.autorfloow.com/signup" className="px-8 py-4 sm:py-3.5 min-w-[210px] text-center flex justify-center text-base md:text-[14px]">
+            <GlowButton href="https://app.autorfloow.com/cadastro" className="px-8 py-4 sm:py-3.5 min-w-[210px] text-center flex justify-center text-base md:text-[14px]">
               Começar grátis agora
             </GlowButton>
             <PremiumLinkButton href="#como-funciona" lightTheme={true}>

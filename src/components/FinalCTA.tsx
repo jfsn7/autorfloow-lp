@@ -35,7 +35,7 @@ export default function FinalCTA() {
         {/* Left aligned CTA Buttons matching referenced image */}
         <div className="flex flex-col sm:flex-row items-center justify-start gap-8 mb-12 w-full sm:w-auto">
           <GlowButton
-            href="https://app.autorfloow.com/signup"
+            href="https://app.autorfloow.com/cadastro"
             className="w-full sm:w-auto min-w-[190px] text-center flex justify-center py-4 sm:py-3 text-base md:text-[13px]"
           >
             Comece grátis agora
