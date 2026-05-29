@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  
+  --color-brand-green-50: #E8F4EE;
+  --color-brand-green-100: #C0DFD0;
+  --color-brand-green-200: #93C7AD;
+  --color-brand-green-300: #64AE89;
+  --color-brand-green-400: #46926D;
+  --color-brand-green-500: #2B724A;
+  --color-brand-green-600: #22533A;
+  --color-brand-green-700: #173C2A;
+  --color-brand-green-800: #0E261A;
+  --color-brand-green-900: #07150E;
+
+  --color-brand-slate-50: #EAF0F5;
+  --color-brand-slate-100: #C2D6E6;
+  --color-brand-slate-200: #94BAD5;
+  --color-brand-slate-300: #629DBF;
+  --color-brand-slate-400: #3F80A8;
+  --color-brand-slate-500: #27638A;
+  --color-brand-slate-600: #1C4D6E;
+  --color-brand-slate-700: #133852;
+  --color-brand-slate-800: #0B2436;
+  --color-brand-slate-900: #05131E;
+
+  --color-brand-gold-50: #FDF6E8;
+  --color-brand-gold-100: #F7E4B5;
+  --color-brand-gold-200: #EDCC78;
+  --color-brand-gold-300: #DFB13C;
+  --color-brand-gold-400: #C4930F;
+  --color-brand-gold-500: #9E7200;
+  --color-brand-gold-600: #7A5800;
+  --color-brand-gold-700: #573E00;
+  --color-brand-gold-800: #362700;
+  --color-brand-gold-900: #1E1500;
+
+  --color-brand-neutral-50: #F6F7F5;
+  --color-brand-neutral-100: #E7E9E6;
+  --color-brand-neutral-200: #CFD2CC;
+  --color-brand-neutral-300: #ADB1A8;
+  --color-brand-neutral-400: #848880;
+  --color-brand-neutral-500: #5C605A;
+  --color-brand-neutral-600: #424641;
+  --color-brand-neutral-700: #2C302B;
+  --color-brand-neutral-800: #1B1E1A;
+  --color-brand-neutral-900: #0F110E;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F6F7F5; /* Neutral-50 */
+  color: #1B1E1A; /* Neutral-800 */
+}
+
+/* Custom Markdown Styling for Legal Pages */
+.markdown-body h1 {
+  @apply text-3xl md:text-4xl font-display font-bold text-brand-neutral-900 mb-8 border-b-2 border-brand-green-500 pb-4;
+}
+
+.markdown-body h2 {
+  @apply text-xl md:text-2xl font-display font-semibold text-brand-neutral-800 mt-12 mb-6;
+}
+
+.markdown-body h3 {
+  @apply text-lg font-display font-semibold text-brand-neutral-800 mt-8 mb-4;
+}
+
+.markdown-body p {
+  @apply text-base text-brand-neutral-600 leading-relaxed font-sans mb-5;
+}
+
+.markdown-body ul {
+  @apply list-disc pl-6 mb-6 text-brand-neutral-600 space-y-2;
+}
+
+.markdown-body table {
+  @apply w-full border-collapse mb-8 text-sm;
+}
+
+.markdown-body th {
+  @apply py-3 px-4 bg-brand-neutral-100 text-brand-neutral-700 font-semibold text-left border border-brand-neutral-200;
+}
+
+.markdown-body td {
+  @apply py-3 px-4 border border-brand-neutral-200 text-brand-neutral-600;
+}
+
+.markdown-body hr {
+  @apply border-brand-neutral-200 my-12;
+}
+
+.markdown-body strong {
+  @apply font-bold text-brand-neutral-800;
+}

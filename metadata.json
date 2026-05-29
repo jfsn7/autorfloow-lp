@@ -1,0 +1,6 @@
+{
+  "name": "AutorFloow",
+  "description": "Construa autoridade com constância — Gerenciador de conteúdo para especialistas e profissionais liberais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
