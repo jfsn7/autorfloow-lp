@@ -69,9 +69,8 @@ export default function Navigation({ onHome }: NavigationProps) {
         >
           Entrar
         </a>
-        <GlowButton 
-          href="#precos" 
-          onClick={onHome ? () => { onHome(); setTimeout(() => window.location.hash = '#precos', 0); } : undefined}
+        <GlowButton
+          href="https://app.autorfloow.com/signup"
           className="text-[13px] px-6 py-2.5 whitespace-nowrap"
         >
           Comece grátis
@@ -136,9 +135,9 @@ export default function Navigation({ onHome }: NavigationProps) {
                 >
                   Entrar
                 </a>
-                <GlowButton 
-                  href="#precos" 
-                  onClick={() => { setIsOpen(false); if (onHome) onHome(); }}
+                <GlowButton
+                  href="https://app.autorfloow.com/signup"
+                  onClick={() => setIsOpen(false)}
                   className="w-full py-3.5 flex justify-center text-base"
                 >
                   Comece grátis

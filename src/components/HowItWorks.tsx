@@ -504,8 +504,8 @@ export default function HowItWorks() {
 
       {/* Modern Centered Sticky Footer/Action Bar for the Steps Flow */}
       <div className="bg-[#FAF9F6] pt-12 pb-24 text-center">
-        <GlowButton 
-          href="#precos" 
+        <GlowButton
+          href="https://app.autorfloow.com/signup"
           className="inline-block !px-10 !py-4.5 !text-sm md:!text-base !min-w-[260px]"
         >
           Quero começar agora
