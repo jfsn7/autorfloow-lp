@@ -70,7 +70,7 @@ export default function Pricing() {
                   <span className="text-sm font-semibold text-brand-neutral-500">/mês</span>
                 </div>
                 <span className="block text-[11px] text-brand-neutral-400 mt-2 font-sans font-medium">
-                  Assinatura de 12 meses
+                  Cancele quando quiser
                 </span>
               </div>
 
@@ -155,7 +155,7 @@ export default function Pricing() {
                   <span className="text-sm font-semibold text-white/80">/mês</span>
                 </div>
                 <span className="block text-[11px] text-white/70 mt-2 font-sans font-medium">
-                  Assinatura de 12 meses
+                  Cancele quando quiser
                 </span>
               </div>
 
