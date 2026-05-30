@@ -29,11 +29,6 @@ const faqData: FAQItem[] = [
     question: 'Já tentei me organizar antes e não funcionou. Por que seria diferente agora?',
     answer: 'Porque o problema não era você, era a ferramenta. Notion e planilhas foram criados para tudo, e é exatamente por isso que não sustentam a rotina de quem tem agenda cheia. O AutorFloow tem um único propósito: fazer a produção de conteúdo de especialistas acontecer toda semana, sem precisar reconfigurar nem relembrar como usar. A estrutura já está pronta, você só executa.',
   },
-  {
-    id: 6,
-    question: 'Posso cancelar a qualquer momento?',
-    answer: 'Sim, sem burocracia. Você pode cancelar sua assinatura quando quiser diretamente pelo painel da sua conta, sem precisar entrar em contato com suporte nem cumprir aviso prévio. Após o cancelamento, seu acesso continua ativo até o fim do período já pago.',
-  },
 ];
 
 export default function FAQ() {
