@@ -75,7 +75,7 @@ export default function Pricing() {
               </div>
 
               <button
-                onClick={() => {}}
+                onClick={() => { window.location.href = 'https://app.autorfloow.com/cadastro?plano=especialista' }}
                 className="relative block w-full text-center bg-[#2B724A] hover:bg-[#22533A] border border-[#DFB13C]/30 font-sans font-bold text-white py-4 px-6 rounded-full transition-all duration-350 shadow-[0_4px_14px_rgba(43,114,74,0.15)] hover:shadow-[0_0_24px_rgba(223,177,60,0.65)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer text-xs md:text-[13px] tracking-widest uppercase select-none overflow-hidden group"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-[#DFB13C]/10 via-transparent to-[#DFB13C]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -160,7 +160,7 @@ export default function Pricing() {
               </div>
 
               <button
-                onClick={() => {}}
+                onClick={() => { window.location.href = 'https://app.autorfloow.com/cadastro?plano=times' }}
                 className="relative block w-full text-center bg-white hover:bg-[#FAF9F6] border border-transparent font-sans font-bold text-[#2B724A] py-4 px-6 rounded-full transition-all duration-350 shadow-[0_4px_14px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.9)] active:shadow-[0_0_40px_rgba(223,177,60,0.85)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer text-xs md:text-[13px] tracking-widest uppercase select-none overflow-hidden group"
               >
                 {/* Embedded style background light beam */}
