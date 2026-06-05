@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AutorFloow | Produza com constância. Construa autoridade.</title>
-    <meta name="description" content="Produza conteúdo com constância e construa autoridade digital. O AutorFloow foi feito para advogados, médicos, dentistas e consultores que querem presença digital sem virar criador de conteúdo." />
+    <title>AutorFloow | Gestão de Conteúdo para Advogados, Médicos e Consultores</title>
+    <meta name="description" content="Produza conteúdo com constância e construa autoridade digital. O AutorFloow é o sistema de gestão de conteúdo feito para advogados, médicos, dentistas e consultores. 14 dias grátis, sem cartão." />
+    <meta name="keywords" content="gestão de conteúdo, marketing digital para médicos, marketing para advogados, produção de conteúdo, presença digital, autoridade digital, conteúdo para especialistas" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="AutorFloow" />
 
     <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
     <meta property="og:type" content="website" />
@@ -15,6 +18,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="AutorFloow" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,6 +32,98 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Schema Markup JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://autorfloow.com/#organization",
+          "name": "AutorFloow",
+          "url": "https://autorfloow.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://autorfloow.com/favicon.png"
+          },
+          "description": "Sistema de gestão de conteúdo para profissionais liberais brasileiros: advogados, médicos, dentistas e consultores.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "availableLanguage": "Portuguese"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://autorfloow.com/#website",
+          "url": "https://autorfloow.com",
+          "name": "AutorFloow",
+          "publisher": { "@id": "https://autorfloow.com/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "AutorFloow",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://app.autorfloow.com",
+          "description": "Sistema kanban de gestão de conteúdo para advogados, médicos, dentistas e consultores que querem produzir com constância e construir autoridade digital.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL",
+            "description": "14 dias grátis, sem cartão de crédito"
+          },
+          "publisher": { "@id": "https://autorfloow.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Preciso ter experiência com ferramentas de produtividade para usar o AutorFloow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O AutorFloow foi desenhado para quem não quer perder tempo configurando ferramentas. Você cria sua conta, entra no produto e já começa a usar em menos de 5 minutos. Sem templates complexos para montar, sem qualquer curva de aprendizado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona o período de 14 dias grátis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você cria sua conta e tem acesso completo ao AutorFloow por 14 dias sem precisar informar cartão. Ao final do período, escolhe o plano que faz mais sentido para a sua fase, ou cancela sem burocracia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Posso usar o AutorFloow sozinho e depois adicionar alguém da equipe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. A plataforma mantém dois workspaces separados para você: o Individual e o de Equipe. Para adicionar alguém ao seu time, você faz a contratação do plano Especialista + Equipe. Assim, você unifica os fluxos e gerencia o acesso de forma integrada."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O AutorFloow publica os conteúdos automaticamente nas redes sociais?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não, e isso é intencional. O AutorFloow organiza sua produção, do rascunho ao conteúdo pronto. A publicação fica com você, para manter o controle da sua presença. Integrações de agendamento estão no roadmap."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Já tentei me organizar antes e não funcionou. Por que o AutorFloow seria diferente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Porque o problema não era você, era a ferramenta. Notion e planilhas foram criados para tudo, e é exatamente por isso que não sustentam a rotina de quem tem agenda cheia. O AutorFloow tem um único propósito: fazer a produção de conteúdo de especialistas acontecer toda semana, sem precisar reconfigurar nem relembrar como usar."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
