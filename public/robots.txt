@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://autorfloow.com/sitemap.xml
+Sitemap: https://www.autorfloow.com/sitemap.xml
