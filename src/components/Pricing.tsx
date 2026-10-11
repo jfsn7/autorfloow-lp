@@ -11,10 +11,10 @@ export default function Pricing() {
         <div className="text-center max-w-2xl mx-auto mb-20">
           <h2 className="font-display font-medium text-4xl md:text-5xl text-brand-neutral-800 tracking-tight leading-tight mb-6">
             Escolha o plano certo<br />
-            <span className="text-brand-green-500">para a sua fase de crescimento.</span>
+            <span className="text-brand-green-500">para a sua fase.</span>
           </h2>
           <p className="text-lg text-brand-neutral-500 font-sans leading-relaxed">
-            Experimente <strong className="text-brand-green-500">14 dias grátis</strong> sem compromisso. Acesso completo desde o primeiro dia.
+            Experimente <strong className="text-brand-green-500">14 dias grátis</strong>, sem cartão. Acesso completo desde o primeiro dia.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function Pricing() {
               <div>
                 <h3 className="font-sans font-semibold text-2xl text-brand-neutral-800 tracking-tight">Especialista Solo</h3>
                 <p className="text-sm text-brand-neutral-450 mt-1.5 font-sans leading-relaxed text-brand-neutral-500">
-                  Para advogados, nutricionistas, engenheiros e consultores que produzem sozinhos e querem um sistema que funciona sem depender de ninguém.
+                  Para quem produz sozinho e quer um sistema que funcione sem depender de ninguém.
                 </p>
               </div>
             </div>
@@ -42,7 +42,7 @@ export default function Pricing() {
             <div className="mb-10">
               <p className="text-xs font-bold text-brand-neutral-400 uppercase tracking-widest mb-4">Estrutura inclusa:</p>
               <ul className="space-y-4">
-                {['Sem limite de rascunhos ou ideias', 'Banco de ideias personalizado', 'Painel de constância e streak', 'Histórico como biblioteca inteligente'].map((feat, idx) => (
+                {['Fluxo de produção em 6 etapas', 'Banco de ideias sem limite', 'Calendário editorial', 'Termômetro de constância', 'Biblioteca de publicações com métricas por post'].map((feat, idx) => (
                   <li key={idx} className="flex items-center gap-3.5 text-sm text-brand-neutral-700">
                     <span className="w-5 h-5 rounded-full bg-brand-green-50 flex items-center justify-center text-brand-green-600 shrink-0">
                       <Check className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -55,7 +55,7 @@ export default function Pricing() {
 
             <div className="mt-auto">
               <div className="mb-6">
-                <span className="block text-xs text-brand-neutral-400 uppercase tracking-widest mb-1.5 font-bold">Investimento anual</span>
+                <span className="block text-xs text-brand-neutral-400 uppercase tracking-widest mb-1.5 font-bold">Plano anual</span>
                 <div className="flex items-center gap-2 mb-2 select-none">
                   <span className="text-xs text-brand-neutral-400 line-through">De R$ 147/mês</span>
                   <span className="text-[10px] font-bold text-brand-green-700 bg-brand-green-50 px-2 py-0.5 rounded">
@@ -70,7 +70,7 @@ export default function Pricing() {
                   <span className="text-sm font-semibold text-brand-neutral-500">/mês</span>
                 </div>
                 <span className="block text-[11px] text-brand-neutral-400 mt-2 font-sans font-medium">
-                  Assinatura de 12 meses
+                  Plano de 12 meses, pago em 12 parcelas mensais de R$ 97
                 </span>
               </div>
 
@@ -117,7 +117,7 @@ export default function Pricing() {
               <div>
                 <h3 className="font-sans font-semibold text-2xl text-white tracking-tight">Especialista + Equipe</h3>
                 <p className="text-sm mt-1.5 font-sans leading-relaxed text-white/85">
-                  Para especialistas que trabalham com assistente, social media ou editor. Todos no mesmo fluxo, sem WhatsApp de alinhamento.
+                  Para quem trabalha com assistente, social media ou editor, todos no mesmo fluxo.
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function Pricing() {
             <div className="mb-10">
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-4 font-mono">Estrutura equipes:</p>
               <ul className="space-y-4">
-                {['Até 3 usuários simultâneos', 'Gestão de convites rápidos', 'Aprovação integrada de roteiros', 'Tudo contido no plano Solo'].map((feat, idx) => (
+                {['Tudo do plano Solo', 'Até 3 usuários simultâneos', 'Convites rápidos', 'Aprovação integrada de roteiros', 'Status de cada conteúdo visível para todos'].map((feat, idx) => (
                   <li key={idx} className="flex items-center gap-3.5 text-sm text-white/95">
                     <span className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-white shrink-0">
                       <Check className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -140,7 +140,7 @@ export default function Pricing() {
 
             <div className="mt-auto">
               <div className="mb-6">
-                <span className="block text-xs text-white uppercase tracking-widest mb-1.5 font-bold">Investimento anual</span>
+                <span className="block text-xs text-white uppercase tracking-widest mb-1.5 font-bold">Plano anual</span>
                 <div className="flex items-center gap-2 mb-2 select-none">
                   <span className="text-xs text-white/65 line-through">De R$ 297/mês</span>
                   <span className="text-[10px] font-bold text-white bg-white/10 border border-white/25 px-2 py-0.5 rounded">
@@ -155,7 +155,7 @@ export default function Pricing() {
                   <span className="text-sm font-semibold text-white/80">/mês</span>
                 </div>
                 <span className="block text-[11px] text-white/70 mt-2 font-sans font-medium">
-                  Assinatura de 12 meses
+                  Plano de 12 meses, pago em 12 parcelas mensais de R$ 197
                 </span>
               </div>
 
@@ -199,7 +199,7 @@ export default function Pricing() {
         <div className="mt-16 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-5 text-center sm:text-left bg-white border border-brand-neutral-200 rounded-xl p-6.5">
           <Shield className="w-7 h-7 text-brand-green-500 shrink-0" />
           <p className="text-sm text-brand-neutral-600 font-sans leading-relaxed font-medium">
-            14 dias grátis, sem cartão. Acesso completo desde o primeiro dia
+            14 dias grátis, sem cartão. Acesso completo desde o primeiro dia. Cancele em até 7 dias úteis após contratar e receba o reembolso integral. Depois disso, você pode cancelar a renovação ao fim dos 12 meses.
           </p>
         </div>
 

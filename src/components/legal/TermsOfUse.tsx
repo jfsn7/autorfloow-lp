@@ -50,7 +50,9 @@ O serviço é operado por José Ferdinando, pessoa física, com sede em Recife, 
 
 4.4 Os valores dos planos estão disponíveis na página de preços e podem ser alterados com aviso prévio de 30 dias.
 
-4.5 Não há reembolso proporcional em caso de cancelamento antes do término do ciclo anual contratado, salvo nos casos previstos no Código de Defesa do Consumidor.
+4.5 O usuário pode cancelar o plano contratado em até 7 (sete) dias úteis após a contratação e receberá o reembolso integral dos valores pagos.
+
+4.6 Após esse prazo, não há reembolso proporcional em caso de cancelamento antes do término do ciclo anual contratado, salvo nos casos previstos no Código de Defesa do Consumidor. O usuário pode cancelar a renovação a qualquer momento, com efeito ao final dos 12 meses contratados.
 
 ---
 

@@ -12,7 +12,7 @@ const faqData: FAQItem[] = [
   {
     id: 2,
     question: 'Como funciona o período de 14 dias grátis?',
-    answer: 'Você cria sua conta e tem acesso completo ao AutorFloow por 14 dias sem precisar informar cartão. Ao final do período, escolhe o plano que faz mais sentido para a sua fase, ou cancela sem burocracia.',
+    answer: 'Você cria sua conta e tem acesso completo ao AutorFloow por 14 dias sem precisar informar cartão. Ao final do período, é necessário escolher um dos dois planos para continuar usando. Contratou e não gostou? Cancele em até 7 dias úteis e receba o reembolso integral. Se você não escolher um plano, seus dados ficam guardados por 30 dias e depois são excluídos.',
   },
   {
     id: 3,
@@ -22,7 +22,7 @@ const faqData: FAQItem[] = [
   {
     id: 4,
     question: 'O AutorFloow publica os conteúdos automaticamente nas redes sociais?',
-    answer: 'Não, e isso é intencional. O AutorFloow organiza sua produção, do rascunho ao conteúdo pronto. A publicação fica com você, para manter o controle da sua presença. Integrações de agendamento estão no roadmap.',
+    answer: 'Não, e isso é intencional. O AutorFloow organiza sua produção, do rascunho ao conteúdo pronto. A publicação fica com você, para manter o controle da sua presença. O AutorFloow também não usa inteligência artificial: a voz é sempre a sua. Integrações de agendamento estão no roadmap.',
   },
   {
     id: 5,

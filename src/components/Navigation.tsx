@@ -73,7 +73,7 @@ export default function Navigation({ onHome }: NavigationProps) {
           href="https://app.autorfloow.com/cadastro"
           className="text-[13px] px-6 py-2.5 whitespace-nowrap"
         >
-          Comece grátis
+          Testar grátis
         </GlowButton>
       </div>
 
@@ -140,7 +140,7 @@ export default function Navigation({ onHome }: NavigationProps) {
                   onClick={() => setIsOpen(false)}
                   className="w-full py-3.5 flex justify-center text-base"
                 >
-                  Comece grátis
+                  Testar grátis
                 </GlowButton>
               </div>
             </div>
