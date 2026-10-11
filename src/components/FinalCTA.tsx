@@ -23,13 +23,12 @@ export default function FinalCTA() {
         {/* Heading matching the reference linebreaks and boldness */}
         <h2 className="font-display font-bold text-4xl sm:text-5xl md:text-[56px] text-white tracking-tight leading-[1.08] mb-6 max-w-2xl">
           Você já tem o conhecimento.<br />
-          Está na hora de construir a<br />
-          autoridade que vai com ele.
+          Falta a constância.
         </h2>
 
         {/* Subheading matching description text */}
         <p className="text-base md:text-lg text-white/70 leading-relaxed font-sans max-w-xl mb-12">
-          Comece hoje. Em 5 minutos você tem seu primeiro conteúdo no fluxo. Sem cartão, sem configuração, sem desculpa.
+          Comece hoje. Em 5 minutos, seu primeiro conteúdo já está no fluxo.
         </p>
 
         {/* Left aligned CTA Buttons matching referenced image */}
@@ -38,7 +37,7 @@ export default function FinalCTA() {
             href="https://app.autorfloow.com/cadastro"
             className="w-full sm:w-auto min-w-[190px] text-center flex justify-center py-4 sm:py-3 text-base md:text-[13px]"
           >
-            Comece grátis agora
+            Testar grátis
           </GlowButton>
           <PremiumLinkButton href="#precos" lightTheme={false}>
             Ver planos e preços

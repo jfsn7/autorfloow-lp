@@ -7,29 +7,29 @@ export default function ProblemSection() {
       num: '01',
       icon: Inbox,
       title: 'Capturar',
-      description: 'Você pode digitar e registrar qualquer ideia rapidamente no AutorFloow.',
+      description: 'Registre qualquer ideia em segundos.',
       pill: 'Captura instantânea'
     },
     {
       num: '02',
       icon: FileText,
-      title: 'Salvar ideias',
-      description: 'Crie e salve seus insights e dúvidas reais de clientes que, no futuro, podem se transformar em posts de alta autoridade.',
+      title: 'Salvar',
+      description: 'Guarde insights e dúvidas reais de clientes.',
       pill: 'Banco de ideias'
     },
     {
       num: '03',
       icon: Target,
-      title: 'Escolher post',
-      description: 'Você navega pelo seu banco de ideias salvas e escolhe o que quer transformar em post.',
-      pill: 'Controle completo'
+      title: 'Produzir',
+      description: 'Leve cada ideia pelo fluxo até publicar.',
+      pill: 'Fluxo de produção'
     },
     {
       num: '04',
       icon: ListTodo,
-      title: 'Produzir',
-      description: 'Quando você escolhe, transforma a ideia salva em um roteiro estruturado com canal e formato definidos.',
-      pill: 'Roteiro pronto para uso'
+      title: 'Aprender',
+      description: 'Registre as métricas e repita o que funcionou.',
+      pill: 'Biblioteca'
     }
   ];
 
@@ -52,7 +52,7 @@ export default function ProblemSection() {
             concorrente seu. <span className="text-brand-neutral-400 block mt-2 text-3xl md:text-5xl">O problema é que esse conhecimento fica preso em você.</span>
           </h2>
           <p className="text-base md:text-lg text-brand-neutral-500 font-sans leading-relaxed max-w-2xl">
-            Chega em insights no meio de uma consulta, notas de voz no carro depois de uma audiência, referências de artigos técnicos, casos reais que valeriam um post. O AutorFloow transforma esse conhecimento disperso em conteúdo que constrói sua autoridade sem você precisar ser um criador de conteúdo.
+            Ele aparece em insights no meio de uma consulta, em notas de voz no carro depois de uma audiência, em referências de artigos técnicos e em casos reais que valeriam um post. O AutorFloow transforma esse conhecimento disperso em conteúdo que constrói a sua autoridade, sem que você precise ser um criador de conteúdo.
           </p>
         </div>
 

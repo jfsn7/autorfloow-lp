@@ -142,7 +142,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-brand-green-500 animate-pulse" />
             <span className="text-[11px] font-bold text-brand-neutral-600 font-sans tracking-wide">
-              Sistema ativo · 1.500+ especialistas esta semana
+              O sistema de conteúdo feito para quem é especialista primeiro
             </span>
           </motion.div>
 
@@ -153,9 +153,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-brand-neutral-800 tracking-tight leading-[1.02] mb-10 select-none px-4"
           >
-            O sistema de conteúdo <br className="hidden md:inline" />
-            <span className="text-brand-green-600">feito para quem é</span> <br className="hidden md:inline" />
-            especialista primeiro.
+            <span className="text-brand-green-600">Publique toda semana</span> <br className="hidden md:inline" />
+            sem virar criador de conteúdo.
           </motion.h1>
 
           {/* Centered description block */}
@@ -165,7 +164,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base md:text-lg text-brand-neutral-500 leading-relaxed font-sans font-normal max-w-2xl mb-12"
           >
-            O AutorFloow foi construído para advogados, nutricionistas, engenheiros, médicos e consultores que querem produzir com constância, sem precisar virar criador de conteúdo. Nenhuma configuração. Pronto em 5 minutos.
+            O AutorFloow organiza suas ideias, roteiros e publicações em um fluxo pronto para especialistas. Sem configurar nada. Pronto em 5 minutos.
           </motion.p>
 
           {/* CTA Buttons - Solid Brand Green design */}
@@ -176,7 +175,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto mb-16"
           >
             <GlowButton href="https://app.autorfloow.com/cadastro" className="px-8 py-4 sm:py-3.5 min-w-[210px] text-center flex justify-center text-base md:text-[14px]">
-              Começar grátis agora
+              Testar grátis
             </GlowButton>
             <PremiumLinkButton href="#como-funciona" lightTheme={true}>
               Ver como funciona
@@ -191,16 +190,16 @@ export default function Hero() {
             className="grid grid-cols-3 gap-8 md:gap-16 border-t border-brand-neutral-200/60 pt-10 w-full max-w-xl"
           >
             <div>
-              <span className="block text-[9px] uppercase tracking-widest text-brand-neutral-400 font-sans font-bold mb-2">GARANTIA</span>
+              <span className="block text-[9px] uppercase tracking-widest text-brand-neutral-400 font-sans font-bold mb-2">TESTE</span>
               <span className="block font-sans font-bold text-xs md:text-sm text-brand-neutral-800">14 dias grátis</span>
             </div>
             <div>
-              <span className="block text-[9px] uppercase tracking-widest text-brand-neutral-400 font-sans font-bold mb-2">ACESSO</span>
-              <span className="block font-sans font-bold text-xs md:text-sm text-brand-neutral-800">Sem cartão</span>
+              <span className="block text-[9px] uppercase tracking-widest text-brand-neutral-400 font-sans font-bold mb-2">CARTÃO</span>
+              <span className="block font-sans font-bold text-xs md:text-sm text-brand-neutral-800">Não é necessário</span>
             </div>
             <div>
-              <span className="block text-[9px] uppercase tracking-widest text-brand-neutral-400 font-sans font-bold mb-2">SUPORTE</span>
-              <span className="block font-sans font-bold text-xs md:text-sm text-brand-neutral-800">Pronto em 5 min</span>
+              <span className="block text-[9px] uppercase tracking-widest text-brand-neutral-400 font-sans font-bold mb-2">INÍCIO</span>
+              <span className="block font-sans font-bold text-xs md:text-sm text-brand-neutral-800">Pronto em 5 minutos</span>
             </div>
           </motion.div>
         </div>
@@ -256,8 +255,8 @@ export default function Hero() {
               <TrendingUp className="w-6 h-6" />
             </div>
             <div className="text-left">
-              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Análise Semanal</p>
-              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">+28.4% Engajamento</p>
+              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Próxima publicação</p>
+              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">Hoje</p>
             </div>
           </motion.div>
 
@@ -272,8 +271,8 @@ export default function Hero() {
               <Lightbulb className="w-6 h-6" />
             </div>
             <div className="text-left">
-              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Ideias Ativas</p>
-              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">12 novos contextos</p>
+              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Ideias salvas</p>
+              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">Banco de ideias</p>
             </div>
           </motion.div>
 
@@ -288,8 +287,8 @@ export default function Hero() {
               <Clock className="w-6 h-6" />
             </div>
             <div className="text-left">
-              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Tempo Economizado</p>
-              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">4.5h / semana</p>
+              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Constância</p>
+              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">Semanas seguidas</p>
             </div>
           </motion.div>
 
@@ -304,8 +303,8 @@ export default function Hero() {
               <Sparkles className="w-6 h-6" />
             </div>
             <div className="text-left">
-              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Score Autoridade</p>
-              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">98.2 Status</p>
+              <p className="text-[10px] font-bold text-brand-neutral-400 uppercase tracking-widest leading-none mb-1.5">Fluxo de produção</p>
+              <p className="text-base font-bold text-brand-neutral-800 font-sans tracking-tight leading-none">6 etapas</p>
             </div>
           </motion.div>
 

@@ -246,10 +246,10 @@ export default function HowItWorks() {
         </span>
         <h2 className="font-display font-medium text-4xl sm:text-5xl lg:text-[56px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
           Com o AutorFloow, <br className="hidden sm:inline" />
-          <span className="text-brand-green-500">é diferente.</span>
+          <span className="text-brand-green-500">sua rotina de conteúdo cabe na agenda.</span>
         </h2>
         <p className="text-base md:text-lg text-brand-neutral-500 font-sans leading-relaxed max-w-2xl font-normal">
-          Quatro passos construídos para a rotina de quem tem agenda cheia, seja no consultório, no escritório ou na academia, e zero tempo para aprender ferramenta nova.
+          Quatro passos pensados para quem atende, advoga ou consulta o dia inteiro e não tem tempo para aprender ferramenta nova.
         </p>
       </div>
 
@@ -260,20 +260,20 @@ export default function HowItWorks() {
           {/* Text details Top */}
           <div className="mb-16 max-w-3xl">
             <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 1: PRODUÇÃO INTELIGENTE
+              PASSO 1: PRODUÇÃO EM FLUXO
             </span>
 
             <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
-              Do rascunho ao publicado. <br />
-              <span className="text-brand-green-500 font-medium font-display">Sem perder nenhuma etapa pelo caminho.</span>
+              Do rascunho ao publicado, <br />
+              <span className="text-brand-green-500 font-medium font-display">sem perder nenhuma etapa.</span>
             </h3>
 
             <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              O fluxo de produção em colunas substitui a procrastinação. Você sabe exatamente em que ponto está cada postagem (roteiro, gravação, edição ou pronto) e qual o seu próximo passo rápido do dia.
+              Seis etapas em colunas: Ideia, Roteiro, Gravação, Edição, Pronto e Publicado. Você vê em que ponto está cada conteúdo e qual é o próximo passo do dia.
             </p>
 
             <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              "Começo a semana com boa intenção. Na quinta, o conteúdo ainda está na minha cabeça."
+              <span className="not-italic font-semibold">Você já pensou assim?</span> "Começo a semana com boa intenção. Na quinta, o conteúdo ainda está na minha cabeça."
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-4">
@@ -323,7 +323,7 @@ export default function HowItWorks() {
           {/* Text Top */}
           <div className="mb-16 max-w-3xl">
             <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 2: REPOSITÓRIO SELETIVO
+              PASSO 2: BANCO DE IDEIAS
             </span>
 
             <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
@@ -332,18 +332,18 @@ export default function HowItWorks() {
             </h3>
 
             <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Desenvolva rascunhos rápidos, referências científicas ou insights em segundos. Mantenha ganchos clínicos qualificados baseados em conexões reais do seu dia a dia.
+              Registre rascunhos, referências e dúvidas de clientes em segundos. Para cada ideia, você define rede, formato, título e descrição. Quando decidir produzir, o botão "Tornar post" leva a ideia direto para o fluxo de produção.
             </p>
 
             <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              "Tinha uma ideia ótima ontem. Agora não lembro mais onde anotei."
+              <span className="not-italic font-semibold">Você já pensou assim?</span> "Tinha uma ideia ótima ontem. Agora não lembro mais onde anotei."
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { icon: Sparkles, text: "Ganchos baseados no seu contexto" },
                 { icon: Plus, text: "Registre antes que suma" },
-                { icon: Check, text: "Canal e formato automáticos" }
+                { icon: Sparkles, text: "Rede e formato por ideia" },
+                { icon: Check, text: "Da ideia ao post em um clique" }
               ].map((pill, i) => (
                 <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
                   <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
@@ -385,27 +385,27 @@ export default function HowItWorks() {
           {/* Text details Top */}
           <div className="mb-16 max-w-3xl">
             <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 3: TERMÔMETRO DE RITMO
+              PASSO 3: RITMO E CALENDÁRIO
             </span>
 
             <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
-              Saiba exatamente <br />
-              <span className="text-brand-green-500 font-medium font-display">há quantas semanas você está construindo autoridade.</span>
+              Saiba <br />
+              <span className="text-brand-green-500 font-medium font-display">há quantas semanas você publica.</span>
             </h3>
 
             <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Acompanhe sua consistência semanal através de alertas visuais. Identifique lapsos de publicação antes que eles prejudiquem seu posicionamento digital.
+              O termômetro de ritmo mostra suas semanas seguidas de publicação e alerta quando a pausa começa, antes que ela vire hábito. O calendário editorial mostra a semana e o mês com tudo o que precisa sair.
             </p>
 
             <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              "Sei que deveria estar publicando mais conteúdo. Mas nem sei mais há quantas semanas estou sem postar nada."
+              <span className="not-italic font-semibold">Você já pensou assim?</span> "Sei que deveria estar publicando mais. Mas nem sei há quantas semanas estou sem postar nada."
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 { icon: Flame, text: "Semanas consecutivas" },
                 { icon: Calendar, text: "Alerta de inércia" },
-                { icon: Sparkles, text: "Progresso visível" }
+                { icon: Sparkles, text: "Calendário semanal e mensal" }
               ].map((pill, i) => (
                 <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
                   <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
@@ -447,27 +447,27 @@ export default function HowItWorks() {
           {/* Text details Top */}
           <div className="mb-16 max-w-3xl">
             <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 4: ENGENHARIA DE ATRAÇÃO
+              PASSO 4: BIBLIOTECA
             </span>
 
             <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
               Entenda o que funcionou. <br />
-              <span className="text-brand-green-500 font-medium font-display">Repita o que trouxe resultados.</span>
+              <span className="text-brand-green-500 font-medium font-display">Repita o que trouxe resultado.</span>
             </h3>
 
             <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Sua biblioteca compila o histórico completo de postagens e métricas reais. Saiba quais pautas geraram mais conexões e replique frameworks eficientes sem esforço.
+              Depois de publicar, você registra as métricas de cada post na Biblioteca. Com o histórico, vê quais temas e formatos geraram mais conexão e repete o que deu certo.
             </p>
 
             <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              "Publico, mas não compreendo quais posts funcionam de verdade. Continuo focado em fidelidade ou no escuro."
+              <span className="not-italic font-semibold">Você já pensou assim?</span> "Publico, mas não sei quais posts funcionam de verdade. Sigo no escuro."
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 { icon: BookOpen, text: "Histórico completo" },
-                { icon: TrendingUp, text: "Métricas reais por post" },
-                { icon: Check, text: "Replique o que funcionou" }
+                { icon: TrendingUp, text: "Métricas por post" },
+                { icon: Check, text: "Repita o que funcionou" }
               ].map((pill, i) => (
                 <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
                   <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
@@ -508,10 +508,10 @@ export default function HowItWorks() {
           href="https://app.autorfloow.com/cadastro"
           className="inline-block !px-10 !py-4.5 !text-sm md:!text-base !min-w-[260px]"
         >
-          Quero começar agora
+          Testar grátis
         </GlowButton>
         <p className="text-sm text-brand-neutral-500 mt-4 font-medium font-sans">
-          Experimente 14 dias grátis.
+          14 dias grátis, sem cartão, acesso completo.
         </p>
       </div>
 

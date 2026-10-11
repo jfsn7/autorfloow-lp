@@ -7,21 +7,21 @@ const transformations = [
     icon: Lightbulb,
     badge: 'ANTES',
     title: 'Suas ideias somem no WhatsApp',
-    description: 'Tudo que você ia postar, o insight na consulta, a referência da aula, a ideia no carro, desaparece antes de virar conteúdo.',
+    description: 'O insight da consulta, a referência da aula, a ideia no carro: tudo desaparece antes de virar conteúdo.',
   },
   {
     num: '02',
     icon: Workflow,
     badge: 'COM O AUTORFLOOW',
     title: 'Cada ideia tem um destino',
-    description: 'Você captura, organiza e encontra qualquer conteúdo em segundos. O banco de ideias trabalha enquanto você atende, advoga ou treina.',
+    description: 'Você captura, organiza e encontra qualquer ideia em segundos. O banco de ideias trabalha enquanto você atende.',
   },
   {
     num: '03',
     icon: Award,
     badge: 'O RESULTADO',
     title: 'Constância real, visível, acumulada',
-    description: 'Semanas seguidas publicando. Autoridade construída. Clientes chegando porque te reconhecem como referência na sua área.',
+    description: 'Semanas seguidas publicando, com o histórico à mostra. Autoridade construída na prática, um conteúdo de cada vez.',
   },
 ];
 
@@ -45,7 +45,7 @@ export default function TrustBar() {
             para de improvisar.
           </h2>
           <p className="text-base md:text-lg text-brand-neutral-500 font-sans leading-relaxed max-w-2xl">
-            Você continua sendo advogado, nutricionista ou engenheiro. O AutorFloow cuida de fazer sua produção acontecer toda semana, sem depender de inspiração.
+            Você continua sendo especialista na sua área. O AutorFloow cuida de fazer sua produção acontecer toda semana, sem depender de inspiração.
           </p>
         </div>
 

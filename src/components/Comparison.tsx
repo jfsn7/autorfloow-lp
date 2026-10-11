@@ -14,7 +14,7 @@ const comparisonRows = [
     planilha: 'X',
   },
   {
-    feature: 'Banco de ideias com canal e formato',
+    feature: 'Banco de ideias com rede e formato',
     autorFloow: 'yes',
     notionTrello: 'Com adaptação',
     planilha: 'X',
