@@ -112,7 +112,7 @@ export default function Hero() {
   const handleResetCard = (cardId: string) => {
     setCards(prev => prev.map(card => {
       if (card.id === cardId) {
-        triggerNotification('Card redefinido para a etapa: IDEIA');
+        triggerNotification('Card redefinido para a etapa: A PRODUZIR');
         return {
           ...card,
           columnId: 'ideia'

@@ -120,7 +120,7 @@ export default function HowItWorks() {
 
     setTasks((prev) => [newTask, ...prev]);
     setNewIdeaTitle('');
-    triggerFeedback('Ideia adicionada à coluna 1!');
+    triggerFeedback('Ideia adicionada à coluna A produzir!');
   };
 
   // Add a suggestion directly
@@ -182,7 +182,7 @@ export default function HowItWorks() {
     setTasks((prev) =>
       prev.map((task) => {
         if (task.id === taskId) {
-          triggerFeedback('Status do post resetado para IDEIA');
+          triggerFeedback('Status do post resetado para A PRODUZIR');
           return { ...task, status: 'ideia' };
         }
         return task;
@@ -269,7 +269,7 @@ export default function HowItWorks() {
             </h3>
 
             <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Seis etapas em colunas: Ideia, Roteiro, Gravação, Edição, Pronto e Publicado. Você vê em que ponto está cada conteúdo e qual é o próximo passo do dia.
+              Seis etapas em colunas: A produzir, Roteiro, Gravação, Edição, Pronto e Publicado. Você vê em que ponto está cada conteúdo e qual é o próximo passo do dia.
             </p>
 
             <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">

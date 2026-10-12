@@ -8,7 +8,7 @@ const featuresData: Feature[] = [
     id: 1,
     tag: 'Fluxo de produção',
     title: '6 etapas, do rascunho ao publicado',
-    description: 'Ideia, Roteiro, Gravação, Edição, Pronto, Publicado. Cada conteúdo sabe onde está e qual é o próximo passo.',
+    description: 'A produzir, Roteiro, Gravação, Edição, Pronto, Publicado. Cada conteúdo sabe onde está e qual é o próximo passo.',
     result: 'Fim do "onde estava mesmo isso?"',
   },
   {
