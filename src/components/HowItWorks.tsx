@@ -12,13 +12,88 @@ import {
   Sparkles, 
   FolderHeart,
   Undo2,
-  AlertCircle
+  Filter
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Task } from '../types';
 import GlowButton from './GlowButton';
 
 const STATUS_ORDER: Task['status'][] = ['ideia', 'roteiro', 'gravacao', 'edicao', 'publicado'];
+
+const STEPS = [
+  {
+    id: '01',
+    label: 'Passo 1: Produção em fluxo',
+    title: 'Do rascunho ao publicado,',
+    accentTitle: 'sem perder nenhuma etapa.',
+    description: 'Seis etapas em colunas: A produzir, Roteiro, Gravação, Edição, Pronto e Publicado. Você vê em que ponto está cada conteúdo, filtra por canal, formato e tag, e sabe qual é o próximo passo do dia. Copie a descrição com um clique na hora de publicar.',
+    quote: '"Começo a semana com boa intenção. Na quinta, o conteúdo ainda está na minha cabeça."',
+    pills: [
+      { icon: BarChart3, text: 'Fluxo visual de produção' },
+      { icon: ChevronRight, text: 'Avance etapas com um clique' },
+      { icon: Filter, text: 'Filtro por canal, formato e tag' },
+    ],
+    image: '/images/af-producao.png',
+    alt: 'Dashboard de Produção AutorFloow',
+    path: 'WORKSPACE / PRODUÇÃO',
+    panel: 'bg-brand-neutral-100',
+    accent: 'bg-brand-green-100/70',
+  },
+  {
+    id: '02',
+    label: 'Passo 2: Banco de ideias',
+    title: 'Capture suas ideias',
+    accentTitle: 'no instante em que surgem.',
+    description: 'Registre rascunhos, referências e dúvidas de clientes em segundos. Para cada ideia, você define canal, formato, título, descrição, prioridade e a série a que ela pertence. Filtre e ordene por prioridade, sequência e canal. Quando decidir produzir, o botão "Transformar em post" leva a ideia direto para a coluna "A produzir" e já inicia o fluxo de produção.',
+    quote: '"Tinha uma ideia ótima ontem. Agora não lembro mais onde anotei."',
+    pills: [
+      { icon: Plus, text: 'Registre antes que suma' },
+      { icon: Sparkles, text: 'Séries, prioridade e canal' },
+      { icon: Check, text: 'Da ideia ao post em um clique' },
+    ],
+    image: '/images/af-ideias.png',
+    alt: 'Banco de Ideias AutorFloow',
+    path: 'WORKSPACE / IDEIAS',
+    panel: 'bg-brand-green-50',
+    accent: 'bg-brand-green-100/70',
+  },
+  {
+    id: '03',
+    label: 'Passo 3: Ritmo e calendário',
+    title: 'Saiba',
+    accentTitle: 'há quantas semanas você publica.',
+    description: 'O termômetro de ritmo mostra suas semanas seguidas de publicação e alerta quando a pausa começa, antes que ela vire hábito. O calendário editorial mostra a semana e o mês com tudo o que precisa sair: posts, Stories e edições da newsletter.',
+    quote: '"Sei que deveria estar publicando mais. Mas nem sei há quantas semanas estou sem postar nada."',
+    pills: [
+      { icon: Flame, text: 'Semanas consecutivas' },
+      { icon: Calendar, text: 'Alerta de inércia' },
+      { icon: Sparkles, text: 'Calendário com posts, Stories e News' },
+    ],
+    image: '/images/af-insights.png',
+    alt: 'Insights e Métricas AutorFloow',
+    path: 'WORKSPACE / INSIGHTS',
+    panel: 'bg-brand-green-50',
+    accent: 'bg-brand-green-100/70',
+  },
+  {
+    id: '04',
+    label: 'Passo 4: Biblioteca',
+    title: 'Entenda o que funcionou.',
+    accentTitle: 'Repita o que trouxe resultado.',
+    description: 'Depois de publicar, você registra as métricas de cada post na Biblioteca. Com o histórico, vê quais temas e formatos geraram mais conexão e repete o que deu certo.',
+    quote: '"Publico, mas não sei quais posts funcionam de verdade. Sigo no escuro."',
+    pills: [
+      { icon: BookOpen, text: 'Histórico completo' },
+      { icon: TrendingUp, text: 'Métricas por post' },
+      { icon: Check, text: 'Repita o que funcionou' },
+    ],
+    image: '/images/af-biblioteca.png',
+    alt: 'Biblioteca de Conteúdo AutorFloow',
+    path: 'WORKSPACE / BIBLIOTECA',
+    panel: 'bg-brand-neutral-100',
+    accent: 'bg-brand-green-100/70',
+  },
+];
 
 export default function HowItWorks() {
   // Shared interactive state across steps to simulate the app!
@@ -253,252 +328,79 @@ export default function HowItWorks() {
         </p>
       </div>
 
-      {/* STEP 1: PRODUÇÃO INTELIGENTE (Kanban Board) */}
-      <section className="relative py-24 px-6 md:px-12 border-b border-brand-neutral-200/50 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-          
-          {/* Text details Top */}
-          <div className="mb-16 max-w-3xl">
-            <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 1: PRODUÇÃO EM FLUXO
-            </span>
-
-            <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
-              Do rascunho ao publicado, <br />
-              <span className="text-brand-green-500 font-medium font-display">sem perder nenhuma etapa.</span>
-            </h3>
-
-            <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Seis etapas em colunas: A produzir, Roteiro, Gravação, Edição, Pronto e Publicado. Você vê em que ponto está cada conteúdo e qual é o próximo passo do dia.
-            </p>
-
-            <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              <span className="not-italic font-semibold">Você já pensou assim?</span> "Começo a semana com boa intenção. Na quinta, o conteúdo ainda está na minha cabeça."
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-4">
-              {[
-                { icon: BarChart3, text: "Fluxo visual de produção" },
-                { icon: ChevronRight, text: "Avance etapas com um clique" },
-                { icon: AlertCircle, text: "Veja o que está travado" }
-              ].map((pill, i) => (
-                <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                  <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
-                  <span className="text-[11px] font-bold text-brand-green-700 uppercase tracking-wider font-mono">{pill.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Dashboard Image Bottom - HUGE prominence */}
-          <div className="w-full">
-            <div className="bg-white border border-brand-neutral-200 rounded-[32px] p-2.5 shadow-[0_42px_80px_rgba(27,30,26,0.1)] overflow-hidden relative group ring-1 ring-black/[0.03]">
-              <div className="bg-brand-neutral-50/80 border-b border-brand-neutral-200 py-4 px-6 flex items-center justify-between backdrop-blur-sm">
-                <div className="flex gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FC5C65]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FED330]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#26DE81]/80" />
-                </div>
-                <div className="text-[10px] font-mono font-bold text-brand-neutral-400 tracking-wider">WORKSPACE / PRODUÇÃO</div>
-                <div className="w-10" /> {/* Spacer */}
-              </div>
-              <div className="bg-white overflow-hidden">
-                <img 
-                  src="/images/af-producao.png" 
-                  alt="Dashboard de Produção AutorFloow" 
-                  className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
-                  referrerPolicy="no-referrer"
+      {/* PASSOS: cards com imagem + explicação */}
+      <section className="px-6 md:px-12 pb-24">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          {STEPS.map((step, i) => (
+            <motion.article
+              key={step.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
+              className="group flex flex-col bg-white border border-brand-neutral-200 rounded-[32px] p-3 md:p-4 shadow-[0_24px_60px_rgba(27,30,26,0.06)] hover:shadow-[0_32px_70px_rgba(27,30,26,0.1)] transition-shadow duration-500"
+            >
+              {/* Painel da imagem */}
+              <div className={`relative h-[260px] md:h-[340px] rounded-[22px] overflow-hidden border border-brand-neutral-200/70 ${step.panel}`}>
+                {/* Forma diagonal do design system */}
+                <div
+                  className={`absolute inset-0 ${step.accent}`}
+                  style={{ clipPath: 'polygon(48% 0, 100% 0, 100% 100%, 12% 100%)' }}
                 />
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </section>
+                {/* Número do passo */}
+                <span className="absolute top-5 left-6 z-10 font-mono text-xs font-bold tracking-widest text-brand-green-700 bg-white/90 border border-brand-neutral-200 rounded-full px-3 py-1">
+                  {step.id}
+                </span>
 
-      {/* STEP 2: REPOSITÓRIO SELETIVO (Banco de Ideias) */}
-      <section className="relative py-24 px-6 md:px-12 bg-[#FAF9F6] border-b border-brand-neutral-200/50 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-          
-          {/* Text Top */}
-          <div className="mb-16 max-w-3xl">
-            <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 2: BANCO DE IDEIAS
-            </span>
-
-            <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
-              Capture suas ideias <br />
-              <span className="text-brand-green-500 font-medium font-display">no instante em que surgem.</span>
-            </h3>
-
-            <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Registre rascunhos, referências e dúvidas de clientes em segundos. Para cada ideia, você define rede, formato, título e descrição. Quando decidir produzir, o botão "Tornar post" leva a ideia direto para o fluxo de produção.
-            </p>
-
-            <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              <span className="not-italic font-semibold">Você já pensou assim?</span> "Tinha uma ideia ótima ontem. Agora não lembro mais onde anotei."
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { icon: Plus, text: "Registre antes que suma" },
-                { icon: Sparkles, text: "Rede e formato por ideia" },
-                { icon: Check, text: "Da ideia ao post em um clique" }
-              ].map((pill, i) => (
-                <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                  <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
-                  <span className="text-[11px] font-bold text-brand-green-700 uppercase tracking-wider font-mono">{pill.text}</span>
+                {/* Tela do produto, cortada na borda do painel */}
+                <div className="absolute left-8 right-[-18%] top-16 bottom-0 bg-white border border-brand-neutral-200 rounded-t-2xl rounded-br-none shadow-[0_24px_60px_rgba(27,30,26,0.14)] overflow-hidden transition-transform duration-700 ease-out group-hover:-translate-y-2 group-hover:-translate-x-1">
+                  <div className="bg-brand-neutral-50 border-b border-brand-neutral-200 py-2.5 px-4 flex items-center gap-3">
+                    <div className="flex gap-1.5 shrink-0">
+                      <div className="w-2 h-2 rounded-full bg-[#FC5C65]/80" />
+                      <div className="w-2 h-2 rounded-full bg-[#FED330]/80" />
+                      <div className="w-2 h-2 rounded-full bg-[#26DE81]/80" />
+                    </div>
+                    <div className="text-[9px] font-mono font-bold text-brand-neutral-400 tracking-wider truncate">{step.path}</div>
+                  </div>
+                  <img
+                    src={step.image}
+                    alt={step.alt}
+                    className="w-full h-auto block"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
 
-          <div className="w-full">
-            <div className="bg-white border border-brand-neutral-200 rounded-[32px] p-2.5 shadow-[0_42px_80px_rgba(27,30,26,0.1)] overflow-hidden relative group ring-1 ring-black/[0.03]">
-              <div className="bg-brand-neutral-50/80 border-b border-brand-neutral-200 py-4 px-6 flex items-center justify-between backdrop-blur-sm">
-                <div className="flex gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FC5C65]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FED330]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#26DE81]/80" />
+              {/* Conteúdo */}
+              <div className="flex flex-col flex-1 px-4 md:px-5 pt-8 pb-5">
+                <span className="font-mono text-[11px] font-semibold text-brand-green-500 uppercase tracking-widest mb-3 inline-block">
+                  {step.label}
+                </span>
+
+                <h3 className="font-display font-semibold text-2xl md:text-[30px] text-brand-neutral-800 tracking-tight leading-[1.12] mb-4">
+                  {step.title} <span className="text-brand-green-500">{step.accentTitle}</span>
+                </h3>
+
+                <p className="text-sm md:text-[15px] text-brand-neutral-500 font-sans leading-relaxed mb-6">
+                  {step.description}
+                </p>
+
+                <div className="mb-6 px-5 py-4 bg-brand-neutral-50 border-l-4 border-brand-green-500 rounded-r-2xl italic text-brand-neutral-600 text-sm leading-relaxed">
+                  <span className="not-italic font-semibold text-brand-neutral-800">Você já pensou assim?</span> {step.quote}
                 </div>
-                <div className="text-[10px] font-mono font-bold text-brand-neutral-400 tracking-wider">WORKSPACE / IDEIAS</div>
-                <div className="w-10" />
-              </div>
-              <div className="bg-white overflow-hidden">
-                <img 
-                  src="/images/af-ideias.png" 
-                  alt="Banco de Ideias AutorFloow" 
-                  className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </section>
-
-      {/* STEP 3: TERMÔMETRO DE RITMO (Insights da Semana) */}
-      <section className="relative py-24 px-6 md:px-12 border-b border-brand-neutral-200/50 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-          
-          {/* Text details Top */}
-          <div className="mb-16 max-w-3xl">
-            <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 3: RITMO E CALENDÁRIO
-            </span>
-
-            <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
-              Saiba <br />
-              <span className="text-brand-green-500 font-medium font-display">há quantas semanas você publica.</span>
-            </h3>
-
-            <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              O termômetro de ritmo mostra suas semanas seguidas de publicação e alerta quando a pausa começa, antes que ela vire hábito. O calendário editorial mostra a semana e o mês com tudo o que precisa sair.
-            </p>
-
-            <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              <span className="not-italic font-semibold">Você já pensou assim?</span> "Sei que deveria estar publicando mais. Mas nem sei há quantas semanas estou sem postar nada."
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { icon: Flame, text: "Semanas consecutivas" },
-                { icon: Calendar, text: "Alerta de inércia" },
-                { icon: Sparkles, text: "Calendário semanal e mensal" }
-              ].map((pill, i) => (
-                <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                  <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
-                  <span className="text-[11px] font-bold text-brand-green-700 uppercase tracking-wider font-mono">{pill.text}</span>
+                <div className="flex flex-wrap gap-2.5 mt-auto">
+                  {step.pills.map((pill, k) => (
+                    <div key={k} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-3.5 py-1.5">
+                      <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
+                      <span className="text-[10px] font-bold text-brand-green-700 uppercase tracking-wider font-mono">{pill.text}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="w-full">
-            <div className="bg-white border border-brand-neutral-200 rounded-[32px] p-2.5 shadow-[0_42px_80px_rgba(27,30,26,0.1)] overflow-hidden relative group ring-1 ring-black/[0.03]">
-              <div className="bg-brand-neutral-50/80 border-b border-brand-neutral-200 py-4 px-6 flex items-center justify-between backdrop-blur-sm">
-                <div className="flex gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FC5C65]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FED330]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#26DE81]/80" />
-                </div>
-                <div className="text-[10px] font-mono font-bold text-brand-neutral-400 tracking-wider">WORKSPACE / INSIGHTS</div>
-                <div className="w-10" />
               </div>
-              <div className="bg-white overflow-hidden">
-                <img 
-                  src="/images/af-insights.png" 
-                  alt="Insights e Métricas AutorFloow" 
-                  className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* STEP 4: ENGENHARIA DE ATRAÇÃO (Biblioteca & Métricas) */}
-      <section className="relative py-24 px-6 md:px-12 bg-[#FAF9F6] border-b border-brand-neutral-200/50 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-          
-          {/* Text details Top */}
-          <div className="mb-16 max-w-3xl">
-            <span className="font-mono text-xs font-semibold text-brand-green-500 uppercase tracking-widest mb-4 inline-block">
-              PASSO 4: BIBLIOTECA
-            </span>
-
-            <h3 className="font-sans font-semibold text-3xl md:text-[42px] text-brand-neutral-800 tracking-tight leading-[1.1] mb-6">
-              Entenda o que funcionou. <br />
-              <span className="text-brand-green-500 font-medium font-display">Repita o que trouxe resultado.</span>
-            </h3>
-
-            <p className="text-sm md:text-base text-brand-neutral-500 font-sans leading-relaxed mb-6 max-w-2xl mx-auto">
-              Depois de publicar, você registra as métricas de cada post na Biblioteca. Com o histórico, vê quais temas e formatos geraram mais conexão e repete o que deu certo.
-            </p>
-
-            <div className="mb-10 inline-block px-6 py-3 bg-white border border-brand-neutral-200 rounded-2xl shadow-sm italic text-brand-neutral-600 text-sm">
-              <span className="not-italic font-semibold">Você já pensou assim?</span> "Publico, mas não sei quais posts funcionam de verdade. Sigo no escuro."
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { icon: BookOpen, text: "Histórico completo" },
-                { icon: TrendingUp, text: "Métricas por post" },
-                { icon: Check, text: "Repita o que funcionou" }
-              ].map((pill, i) => (
-                <div key={i} className="flex items-center gap-2 bg-brand-green-50/50 border border-brand-green-100 rounded-full px-4 py-1.5 backdrop-blur-sm">
-                  <pill.icon className="w-3.5 h-3.5 text-brand-green-600" />
-                  <span className="text-[11px] font-bold text-brand-green-700 uppercase tracking-wider font-mono">{pill.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="w-full">
-            <div className="bg-white border border-brand-neutral-200 rounded-[32px] p-2.5 shadow-[0_42px_80px_rgba(27,30,26,0.1)] overflow-hidden relative group ring-1 ring-black/[0.03]">
-              <div className="bg-brand-neutral-50/80 border-b border-brand-neutral-200 py-4 px-6 flex items-center justify-between backdrop-blur-sm">
-                <div className="flex gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FC5C65]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#FED330]/80" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#26DE81]/80" />
-                </div>
-                <div className="text-[10px] font-mono font-bold text-brand-neutral-400 tracking-wider">WORKSPACE / BIBLIOTECA</div>
-                <div className="w-10" />
-              </div>
-              <div className="bg-white overflow-hidden">
-                <img 
-                  src="/images/af-biblioteca.png" 
-                  alt="Biblioteca de Conteúdo AutorFloow" 
-                  className="w-full h-auto object-cover transform transition-transform duration-1000 ease-out group-hover:scale-[1.015]"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </div>
-
+            </motion.article>
+          ))}
         </div>
       </section>
 

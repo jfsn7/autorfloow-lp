@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import TrustBar from './components/TrustBar';
 import ProblemSection from './components/ProblemSection';
 import HowItWorks from './components/HowItWorks';
+import StoriesNews from './components/StoriesNews';
 import Features from './components/Features';
 import Comparison from './components/Comparison';
 import Audience from './components/Audience';
@@ -59,6 +60,7 @@ export default function App() {
         <TrustBar />
         <ProblemSection />
         <HowItWorks />
+        <StoriesNews />
         <Features />
         <Comparison />
         <Audience />

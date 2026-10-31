@@ -7,6 +7,13 @@ interface NavigationProps {
   onHome?: () => void;
 }
 
+const LINKS = [
+  { label: 'Como funciona', href: '#como-funciona' },
+  { label: 'Funcionalidades', href: '#funcionalidades' },
+  { label: 'Preços', href: '#precos' },
+  { label: 'Dúvidas', href: '#faq' },
+];
+
 export default function Navigation({ onHome }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,113 +24,88 @@ export default function Navigation({ onHome }: NavigationProps) {
     }
   };
 
+  const goTo = (href: string) => (e: React.MouseEvent) => {
+    setIsOpen(false);
+    if (onHome) {
+      e.preventDefault();
+      onHome();
+      setTimeout(() => { window.location.hash = href; }, 0);
+    }
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-neutral-50/90 backdrop-blur-md border-b border-brand-neutral-200 h-16 flex items-center justify-between px-6 md:px-8 lg:px-12">
-      {/* Brand logo */}
-      <a href="#" onClick={handleLogoClick} className="flex items-center gap-2 group mr-2">
-        <img 
-          src="/assets/af-logo-original.svg"
-          alt="AutorFloow Logo" 
-          className="h-11 w-auto group-hover:scale-105 transition-transform"
-          referrerPolicy="no-referrer"
-        />
-      </a>
+    <nav className="fixed top-3 md:top-4 left-3 right-3 md:left-6 md:right-6 z-50 max-w-[1400px] mx-auto">
+      <div className="relative bg-brand-neutral-50/90 backdrop-blur-md border border-brand-neutral-200 rounded-full shadow-[0_8px_30px_rgba(27,30,26,0.08)] h-[56px] md:h-[64px] flex items-center justify-between pl-4 pr-2.5 md:pl-5 md:pr-3">
+        {/* Logo */}
+        <a href="#" onClick={handleLogoClick} className="flex items-center group shrink-0">
+          <img
+            src="/assets/af-logo-original.svg"
+            alt="AutorFloow Logo"
+            className="h-10 md:h-11 w-auto group-hover:scale-105 transition-transform"
+            referrerPolicy="no-referrer"
+          />
+        </a>
 
-      {/* Nav Links - Desktop */}
-      <div className="hidden lg:flex items-center lg:gap-8" id="nav-links">
-        <a 
-          href="#como-funciona" 
-          onClick={onHome ? (e) => { e.preventDefault(); onHome(); setTimeout(() => window.location.hash = '#como-funciona', 0); } : undefined}
-          className="text-sm font-display font-medium text-brand-neutral-500 hover:text-brand-green-500 transition-colors"
+        {/* Links - Desktop */}
+        <div className="hidden lg:flex items-center gap-9 xl:gap-11" id="nav-links">
+          {LINKS.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              onClick={goTo(href)}
+              className="text-[15px] font-sans font-medium text-brand-neutral-600 hover:text-brand-green-500 transition-colors"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+
+        {/* Ações - Desktop */}
+        <div className="hidden lg:flex items-center gap-6">
+          <a
+            href="https://app.autorfloow.com/login"
+            className="text-[15px] font-sans font-medium text-brand-neutral-600 hover:text-brand-green-500 transition-colors"
+          >
+            Entrar
+          </a>
+          <GlowButton
+            href="https://app.autorfloow.com/cadastro"
+            className="text-[14px] px-6 py-3 whitespace-nowrap"
+          >
+            Testar grátis
+          </GlowButton>
+        </div>
+
+        {/* Gatilho do menu mobile */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="lg:hidden p-2 mr-1 text-brand-neutral-700 hover:text-brand-green-500 focus:outline-none focus:ring-0"
+          aria-label="Abrir menu"
         >
-          Como funciona
-        </a>
-        <a 
-          href="#funcionalidades" 
-          onClick={onHome ? (e) => { e.preventDefault(); onHome(); setTimeout(() => window.location.hash = '#funcionalidades', 0); } : undefined}
-          className="text-sm font-display font-medium text-brand-neutral-500 hover:text-brand-green-500 transition-colors"
-        >
-          Funcionalidades
-        </a>
-        <a 
-          href="#precos" 
-          onClick={onHome ? (e) => { e.preventDefault(); onHome(); setTimeout(() => window.location.hash = '#precos', 0); } : undefined}
-          className="text-sm font-display font-medium text-brand-neutral-500 hover:text-brand-green-500 transition-colors"
-        >
-          Preços
-        </a>
-        <a 
-          href="#faq" 
-          onClick={onHome ? (e) => { e.preventDefault(); onHome(); setTimeout(() => window.location.hash = '#faq', 0); } : undefined}
-          className="text-sm font-display font-medium text-brand-neutral-500 hover:text-brand-green-500 transition-colors"
-        >
-          Dúvidas
-        </a>
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
 
-      {/* Action Buttons - Desktop */}
-      <div className="hidden lg:flex items-center lg:gap-5">
-        <a
-          href="https://app.autorfloow.com/login"
-          className="text-sm font-display font-medium text-brand-neutral-500 hover:text-brand-green-500 transition-colors flex items-center gap-1.5"
-        >
-          Entrar
-        </a>
-        <GlowButton
-          href="https://app.autorfloow.com/cadastro"
-          className="text-[13px] px-6 py-2.5 whitespace-nowrap"
-        >
-          Testar grátis
-        </GlowButton>
-      </div>
-
-      {/* Mobile Menu Trigger */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 text-brand-neutral-700 hover:text-brand-green-500 focus:outline-none focus:ring-0"
-        aria-label="Toggle menu"
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-
-      {/* Mobile Menu Panel */}
+      {/* Painel mobile */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden absolute top-16 left-0 right-0 bg-brand-neutral-50 border-b border-brand-neutral-200 overflow-hidden shadow-lg"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            className="lg:hidden mt-2 bg-brand-neutral-50 border border-brand-neutral-200 rounded-3xl overflow-hidden shadow-[0_8px_30px_rgba(27,30,26,0.12)]"
           >
             <div className="flex flex-col px-6 py-6 gap-4">
-              <a
-                href="#como-funciona"
-                onClick={() => { setIsOpen(false); if (onHome) onHome(); }}
-                className="text-base font-semibold text-brand-neutral-700 hover:text-brand-green-500 transition-colors"
-              >
-                Como funciona
-              </a>
-              <a
-                href="#funcionalidades"
-                onClick={() => { setIsOpen(false); if (onHome) onHome(); }}
-                className="text-base font-semibold text-brand-neutral-700 hover:text-brand-green-500 transition-colors"
-              >
-                Funcionalidades
-              </a>
-              <a
-                href="#precos"
-                onClick={() => { setIsOpen(false); if (onHome) onHome(); }}
-                className="text-base font-semibold text-brand-neutral-700 hover:text-brand-green-500 transition-colors"
-              >
-                Preços
-              </a>
-              <a
-                href="#faq"
-                onClick={() => { setIsOpen(false); if (onHome) onHome(); }}
-                className="text-base font-semibold text-brand-neutral-700 hover:text-brand-green-500 transition-colors"
-              >
-                Dúvidas
-              </a>
+              {LINKS.map(({ label, href }) => (
+                <a
+                  key={href}
+                  href={href}
+                  onClick={goTo(href)}
+                  className="text-base font-semibold text-brand-neutral-700 hover:text-brand-green-500 transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
 
               <hr className="border-brand-neutral-200 my-2" />
 
@@ -131,7 +113,7 @@ export default function Navigation({ onHome }: NavigationProps) {
                 <a
                   href="https://app.autorfloow.com/login"
                   onClick={() => setIsOpen(false)}
-                  className="w-full text-center py-3 text-brand-neutral-700 hover:text-brand-green-500 font-display font-semibold border border-brand-neutral-200 rounded-lg flex items-center justify-center gap-2"
+                  className="w-full text-center py-3 text-brand-neutral-700 hover:text-brand-green-500 font-display font-semibold border border-brand-neutral-200 rounded-full flex items-center justify-center gap-2"
                 >
                   Entrar
                 </a>

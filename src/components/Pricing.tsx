@@ -25,7 +25,7 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            whileHover={{ y: -4, shadow: '0 20px 48px rgba(43,114,74,0.04)' }}
+            whileHover={{ y: -4, boxShadow: '0 20px 48px rgba(43,114,74,0.04)' }}
             className="bg-white border border-brand-neutral-200 rounded-3xl p-10 relative flex flex-col transition-all overflow-hidden"
           >
             <div className="flex items-start justify-between mb-8">
@@ -42,7 +42,7 @@ export default function Pricing() {
             <div className="mb-10">
               <p className="text-xs font-bold text-brand-neutral-400 uppercase tracking-widest mb-4">Estrutura inclusa:</p>
               <ul className="space-y-4">
-                {['Fluxo de produção em 6 etapas', 'Banco de ideias sem limite', 'Calendário editorial', 'Termômetro de constância', 'Biblioteca de publicações com métricas por post'].map((feat, idx) => (
+                {['Fluxo de produção em 6 etapas, com filtro por canal, formato e tag', 'Banco de ideias sem limite, com séries e prioridade', 'Stories de segunda a domingo, com taxa de retenção', 'News: editor de newsletter com pastas, busca e status', 'Calendário editorial com posts, Stories e News', 'Termômetro de constância', 'Biblioteca de publicações com métricas por post'].map((feat, idx) => (
                   <li key={idx} className="flex items-center gap-3.5 text-sm text-brand-neutral-700">
                     <span className="w-5 h-5 rounded-full bg-brand-green-50 flex items-center justify-center text-brand-green-600 shrink-0">
                       <Check className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -91,7 +91,7 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            whileHover={{ y: -4, shadow: '0 24px 60px rgba(43,114,74,0.3)' }}
+            whileHover={{ y: -4, boxShadow: '0 24px 60px rgba(43,114,74,0.3)' }}
             className="bg-[#2B724A] border border-white/15 rounded-3xl p-10 relative flex flex-col transition-all overflow-hidden"
           >
             {/* Styles for the button glow tracer */}
@@ -127,7 +127,7 @@ export default function Pricing() {
             <div className="mb-10">
               <p className="text-xs font-bold text-white uppercase tracking-widest mb-4 font-mono">Estrutura equipes:</p>
               <ul className="space-y-4">
-                {['Tudo do plano Solo', 'Até 3 usuários simultâneos', 'Convites rápidos', 'Aprovação integrada de roteiros', 'Status de cada conteúdo visível para todos'].map((feat, idx) => (
+                {['Tudo do plano Solo', 'Até 3 usuários simultâneos', 'Convites rápidos', 'Avatar de quem criou cada ideia', 'Aprovação integrada de roteiros', 'Status de cada conteúdo visível para todos'].map((feat, idx) => (
                   <li key={idx} className="flex items-center gap-3.5 text-sm text-white/95">
                     <span className="w-5 h-5 rounded-full bg-white/15 flex items-center justify-center text-white shrink-0">
                       <Check className="w-3.5 h-3.5 stroke-[2.5]" />

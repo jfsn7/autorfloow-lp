@@ -14,7 +14,7 @@ const transformations = [
     icon: Workflow,
     badge: 'COM O AUTORFLOOW',
     title: 'Cada ideia tem um destino',
-    description: 'Você captura, organiza e encontra qualquer ideia em segundos. O banco de ideias trabalha enquanto você atende.',
+    description: 'Você captura, organiza em séries e encontra qualquer ideia em segundos. Ela segue para um post, uma sequência de Stories ou uma edição da newsletter. O banco de ideias trabalha enquanto você atende.',
   },
   {
     num: '03',

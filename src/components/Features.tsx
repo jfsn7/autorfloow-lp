@@ -1,5 +1,5 @@
 import { ComponentType } from 'react';
-import { Layers, Users, Lightbulb, Calendar, BarChart4, Bookmark, CheckCircle2 } from 'lucide-react';
+import { Layers, Users, Lightbulb, Calendar, BarChart4, Bookmark, CheckCircle2, Clapperboard, Mail, Share2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Feature } from '../types';
 
@@ -8,14 +8,14 @@ const featuresData: Feature[] = [
     id: 1,
     tag: 'Fluxo de produção',
     title: '6 etapas, do rascunho ao publicado',
-    description: 'A produzir, Roteiro, Gravação, Edição, Pronto, Publicado. Cada conteúdo sabe onde está e qual é o próximo passo.',
+    description: 'A produzir, Roteiro, Gravação, Edição, Pronto, Publicado, com filtro por canal, formato e tag. Cada conteúdo sabe onde está e qual é o próximo passo.',
     result: 'Fim do "onde estava mesmo isso?"',
   },
   {
     id: 2,
     tag: 'Solo ou com equipe de até 3 pessoas',
     title: 'Convide assistente, social media ou editor.',
-    description: 'Todos veem o status de cada conteúdo, com aprovação de roteiros no próprio fluxo.',
+    description: 'Todos veem o status de cada conteúdo e quem criou cada ideia, com aprovação de roteiros no próprio fluxo.',
     result: 'Sem alinhamento manual, sem WhatsApp',
     isFeatured: true,
   },
@@ -23,29 +23,50 @@ const featuresData: Feature[] = [
     id: 3,
     tag: 'Banco de ideias',
     title: 'Registre ideias a qualquer hora',
-    description: 'Anote com rede e formato. Quando decidir produzir, a pauta já está pronta.',
+    description: 'Anote com canal, formato e prioridade. Agrupe em séries, filtre e ordene. Quando decidir produzir, a pauta já está pronta.',
     result: 'Sempre com pauta, sem bloqueio criativo',
   },
   {
     id: 4,
-    tag: 'Calendário editorial',
-    title: 'Visão semanal e mensal do que vai sair',
-    description: 'Planeje com antecedência e publique com previsibilidade.',
-    result: 'Da reatividade para a previsibilidade',
+    tag: 'Stories',
+    title: 'A semana inteira numa tela',
+    description: 'Stories de segunda a domingo e taxa de retenção, comparando o alcance do último com o do primeiro.',
+    result: 'Saiba quanto da audiência fica até o fim',
   },
   {
     id: 5,
+    tag: 'News',
+    title: 'Newsletter no mesmo lugar',
+    description: 'Editor de blocos, pastas, busca e filtro por status. Uma ideia marcada como Newsletter vira edição.',
+    result: 'Da ideia à edição sem trocar de ferramenta',
+  },
+  {
+    id: 6,
+    tag: 'Calendário editorial',
+    title: 'Posts, Stories e News em um só calendário',
+    description: 'Visão semanal e mensal de tudo o que vai sair. Planeje com antecedência e publique com previsibilidade.',
+    result: 'Da reatividade para a previsibilidade',
+  },
+  {
+    id: 7,
     tag: 'Insights de constância',
     title: 'Quantas semanas seguidas você publicou',
     description: 'Veja o ritmo, os lapsos e a próxima meta. A constância vira dado.',
     result: 'Progresso real que alimenta o hábito',
   },
   {
-    id: 6,
+    id: 8,
     tag: 'Biblioteca de publicações',
     title: 'Métricas por post, em um só lugar',
     description: 'Registre os resultados de cada publicação e repita o que gerou mais conexão.',
     result: 'Estratégia baseada em dados, não em achismo',
+  },
+  {
+    id: 9,
+    tag: 'Canais',
+    title: 'Seus canais no mesmo fluxo',
+    description: 'Instagram, TikTok, YouTube, LinkedIn, X, Threads, Notes e Newsletter, todos organizados no mesmo lugar.',
+    result: 'Um só lugar para todos os canais',
   },
 ];
 
@@ -53,9 +74,12 @@ const featureIcons: { [key: number]: ComponentType<any> } = {
   1: Layers,
   2: Users,
   3: Lightbulb,
-  4: Calendar,
-  5: BarChart4,
-  6: Bookmark,
+  4: Clapperboard,
+  5: Mail,
+  6: Calendar,
+  7: BarChart4,
+  8: Bookmark,
+  9: Share2,
 };
 
 export default function Features() {
@@ -88,7 +112,7 @@ export default function Features() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4 }}
                 whileHover={{ y: -4, boxShadow: '0 12px 24px rgba(43,114,74,0.06)' }}
-                className={`rounded-2xl p-8 border ${
+                className={`rounded-2xl p-8 border ${feat.id === 9 ? 'md:col-span-2 lg:col-span-1' : ''} ${
                   feat.isFeatured
                     ? 'bg-brand-green-500 border-brand-green-500 text-white shadow-lg shadow-brand-green-500/10'
                     : 'bg-white border-brand-neutral-200 text-brand-neutral-800'
