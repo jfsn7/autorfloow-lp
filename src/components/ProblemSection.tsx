@@ -84,7 +84,7 @@ export default function ProblemSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
-                  className="w-full bg-white/95 backdrop-blur-md border border-brand-neutral-200/40 rounded-[24px] p-8 pb-8 flex flex-col items-center justify-center text-center min-h-[340px] transition-all hover:border-brand-green-200 hover:shadow-[0_12px_45px_rgba(27,30,26,0.04)] duration-300"
+                  className="w-full bg-white/95 backdrop-blur-md border border-brand-neutral-200/40 rounded-[24px] p-8 pb-8 flex flex-col items-center justify-center text-center sm:min-h-[340px] transition-all hover:border-brand-green-200 hover:shadow-[0_12px_45px_rgba(27,30,26,0.04)] duration-300"
                 >
                   <div className="flex flex-col items-center">
                     {/* Centered Icon badge with brand green */}

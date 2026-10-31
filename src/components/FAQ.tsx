@@ -21,13 +21,18 @@ const faqData: FAQItem[] = [
   },
   {
     id: 4,
-    question: 'O AutorFloow publica os conteúdos automaticamente nas redes sociais?',
-    answer: 'Não, e isso é intencional. O AutorFloow organiza sua produção, do rascunho ao conteúdo pronto. A publicação fica com você, para manter o controle da sua presença. O AutorFloow também não usa inteligência artificial: a voz é sempre a sua. Integrações de agendamento estão no roadmap.',
+    question: 'Em quais canais e formatos posso usar o AutorFloow?',
+    answer: 'Você organiza ideias e conteúdos para Instagram, TikTok, YouTube, LinkedIn, X, Threads, Notes e Newsletter, incluindo Stories. Os posts publicados entram na Biblioteca de métricas. Threads, Notes e Newsletter não entram nela, e os Stories são medidos na tela de Stories, com taxa de retenção.',
   },
   {
     id: 5,
     question: 'Já tentei me organizar antes e não funcionou. Por que seria diferente agora?',
     answer: 'Porque o problema não era você, era a ferramenta. Notion e planilhas foram criados para tudo, e é exatamente por isso que não sustentam a rotina de quem tem agenda cheia. O AutorFloow tem um único propósito: fazer a produção de conteúdo de especialistas acontecer toda semana, sem precisar reconfigurar nem relembrar como usar. A estrutura já está pronta, você só executa.',
+  },
+  {
+    id: 6,
+    question: 'Meus dados e os dos meus clientes estão protegidos?',
+    answer: 'Cada organização acessa apenas os próprios dados, com regras de acesso aplicadas no banco de dados, e o sistema passou por uma revisão de segurança. O tratamento de dados segue a LGPD, conforme os Termos de Uso e a Política de Privacidade.',
   },
 ];
 

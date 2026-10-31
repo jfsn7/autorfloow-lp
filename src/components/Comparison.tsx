@@ -14,16 +14,28 @@ const comparisonRows = [
     planilha: 'X',
   },
   {
-    feature: 'Banco de ideias com rede e formato',
-    autorFloow: 'yes',
-    notionTrello: 'Com adaptação',
-    planilha: 'X',
-  },
-  {
-    feature: 'Calendário editorial integrado',
+    feature: 'Banco de ideias em séries, com prioridade e filtros',
     autorFloow: 'yes',
     notionTrello: 'Com adaptação',
     planilha: 'Manual',
+  },
+  {
+    feature: 'Calendário com posts, Stories e newsletter',
+    autorFloow: 'yes',
+    notionTrello: 'Com adaptação',
+    planilha: 'Manual',
+  },
+  {
+    feature: 'Semana de Stories com taxa de retenção',
+    autorFloow: 'yes',
+    notionTrello: 'Manual',
+    planilha: 'Manual',
+  },
+  {
+    feature: 'Newsletter planejada e escrita junto com o resto',
+    autorFloow: 'yes',
+    notionTrello: 'Com adaptação',
+    planilha: 'X',
   },
   {
     feature: 'Insights de constância e diagnóstico semanal',
@@ -90,19 +102,19 @@ export default function Comparison() {
         {/* Comparison Board - Custom Table Design exactly like user request */}
         <div className="border border-brand-neutral-200 rounded-2xl bg-white overflow-hidden shadow-[0_16px_40px_rgba(27,30,26,0.02)]">
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse table-auto min-w-[720px]">
+            <table className="w-full text-left border-collapse table-fixed md:table-auto md:min-w-[720px]">
               <thead>
                 <tr className="bg-[#FAF9F6] border-b border-brand-neutral-200 font-display">
-                  <th className="py-5 px-6 text-sm font-bold text-brand-neutral-800 w-[42%] pl-8">
+                  <th className="py-4 md:py-5 px-3 md:px-6 text-xs md:text-sm font-bold text-brand-neutral-800 w-[34%] md:w-[42%] md:pl-8">
                     Recurso
                   </th>
-                  <th className="py-5 px-6 text-[15px] font-bold text-white text-center bg-[#2B724A] w-[22%] tracking-wider">
+                  <th className="py-4 md:py-5 px-1.5 md:px-6 text-[11px] md:text-[15px] font-bold text-white text-center bg-[#2B724A] w-[22%] tracking-normal md:tracking-wider">
                     AutorFloow
                   </th>
-                  <th className="py-5 px-6 text-sm font-bold text-brand-neutral-800 text-center w-[18%]">
+                  <th className="py-4 md:py-5 px-1.5 md:px-6 text-[11px] md:text-sm font-bold text-brand-neutral-800 text-center w-[22%] md:w-[18%]">
                     Notion / Trello
                   </th>
-                  <th className="py-5 px-6 text-sm font-bold text-brand-neutral-800 text-center w-[18%]">
+                  <th className="py-4 md:py-5 px-1.5 md:px-6 text-[11px] md:text-sm font-bold text-brand-neutral-800 text-center w-[22%] md:w-[18%]">
                     Planilha
                   </th>
                 </tr>
@@ -116,19 +128,19 @@ export default function Comparison() {
                       className={`transition-colors ${isEven ? 'bg-[#FAF9F6]/40' : 'bg-white'}`}
                     >
                       {/* Feature Column */}
-                      <td className="py-4.5 px-6 pl-8 text-sm md:text-[14.5px] font-medium text-brand-neutral-800">
+                      <td className="py-3 md:py-4.5 px-3 md:px-6 md:pl-8 text-xs md:text-[14.5px] leading-snug font-medium text-brand-neutral-800">
                         {row.feature}
                       </td>
 
                       {/* AutorFloow Column */}
-                      <td className={`py-4.5 px-6 text-center border-x border-brand-neutral-200/20 ${isEven ? 'bg-[#E8F4EE]/50' : 'bg-white'}`}>
+                      <td className={`py-3 md:py-4.5 px-1.5 md:px-6 text-center border-x border-brand-neutral-200/20 ${isEven ? 'bg-[#E8F4EE]/50' : 'bg-white'}`}>
                         <div className="flex items-center justify-center">
                           <GreenCheck />
                         </div>
                       </td>
 
                       {/* Notion / Trello Column */}
-                      <td className="py-4.5 px-6 text-center text-sm">
+                      <td className="py-3 md:py-4.5 px-1.5 md:px-6 text-center text-sm">
                         {row.notionTrello === 'yes' ? (
                           <div className="flex items-center justify-center">
                             <GrayCheck />
@@ -138,14 +150,14 @@ export default function Comparison() {
                             <GrayCross />
                           </div>
                         ) : (
-                          <span className="text-xs md:text-[13px] font-medium text-brand-neutral-500 block text-center">
+                          <span className="text-[10px] md:text-[13px] leading-tight font-medium text-brand-neutral-500 block text-center">
                             {row.notionTrello}
                           </span>
                         )}
                       </td>
 
                       {/* Planilha Column */}
-                      <td className="py-4.5 px-6 text-center text-sm">
+                      <td className="py-3 md:py-4.5 px-1.5 md:px-6 text-center text-sm">
                         {row.planilha === 'yes' ? (
                           <div className="flex items-center justify-center">
                             <GrayCheck />
@@ -155,7 +167,7 @@ export default function Comparison() {
                             <GrayCross />
                           </div>
                         ) : (
-                          <span className="text-xs md:text-[13px] font-medium text-brand-neutral-500 block text-center">
+                          <span className="text-[10px] md:text-[13px] leading-tight font-medium text-brand-neutral-500 block text-center">
                             {row.planilha}
                           </span>
                         )}
