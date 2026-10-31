@@ -131,7 +131,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-14 lg:gap-24 items-start">
 
         {/* Copy — alinhada à esquerda */}
-        <div className="flex flex-col items-start text-left">
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -155,7 +155,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6 mb-12"
+            className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-5 sm:gap-6 mb-12"
           >
             <GlowButton href="https://app.autorfloow.com/cadastro" className="px-8 py-4 sm:py-3.5 min-w-[210px] text-center flex justify-center text-base md:text-[14px]">
               Testar grátis
